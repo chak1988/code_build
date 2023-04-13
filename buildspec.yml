@@ -7,8 +7,8 @@ version: 0.2
 
 env:
   secrets-manager:
-    DOCKERHUB_PASS: "/docker/password"
-    DOCKERHUB_USERNAME: "/docker/username"
+    DOCKERHUB_PASS: "/docker/password: /docker/password"
+    DOCKERHUB_USERNAME: "/docker/username: /docker/username"
   variables:
     AWS_DEFAULT_REGION: "us-west-2"
     AWS_ACCOUNT_ID    : "000689839748"
