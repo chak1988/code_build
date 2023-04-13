@@ -5,7 +5,7 @@
 #--------------------------------------------------------------
 version: 0.2
 
-env
+env:
   secrets-manager:
     DOCKERHUB_PASS: "/docker/password"
     DOCKERHUB_USERNAME: "/docker/username"
