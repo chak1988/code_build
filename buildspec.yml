@@ -7,8 +7,8 @@ version: 0.2
 
 env:
   secrets-manager:
-    DOCKERHUB_PASS: arn:aws:secretsmanager:us-west-2:000689839748:secret:password-bvMYup
-    DOCKERHUB_USERNAME: arn:aws:secretsmanager:us-west-2:000689839748:secret:username-52a3Pd
+    DOCKERHUB_PASS: arn:aws:secretsmanager:us-west-2:000689839748:secret:password
+    DOCKERHUB_USERNAME: arn:aws:secretsmanager:us-west-2:000689839748:secret:username
   variables:
     AWS_DEFAULT_REGION: "us-west-2"
     AWS_ACCOUNT_ID    : "000689839748"
