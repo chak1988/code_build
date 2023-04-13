@@ -7,8 +7,8 @@ version: 0.2
 
 env:
   secrets-manager:
-    DOCKERHUB_PASS: arn:aws:secretsmanager:us-west-2:000689839748:secret:docker/password-0cPYdc
-    DOCKERHUB_USERNAME: arn:aws:secretsmanager:us-west-2:000689839748:secret:docker/username-EuGsdn
+    DOCKERHUB_PASS: arn:aws:secretsmanager:us-west-2:000689839748:secret:password-bvMYup
+    DOCKERHUB_USERNAME: arn:aws:secretsmanager:us-west-2:000689839748:secret:username-52a3Pd
   variables:
     AWS_DEFAULT_REGION: "us-west-2"
     AWS_ACCOUNT_ID    : "000689839748"
@@ -24,6 +24,7 @@ phases:
 
   pre_build:
     commands:
+      - echo $DOCKERHUB_PASS
       - docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASS
       - echo "Login to AWS ECR and get commit id"
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION| docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
